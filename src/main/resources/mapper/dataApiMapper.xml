@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.muheda.dao.mysql.mapper.DataApiMapper">
+
+
+    <select id = "queryAllProject"   resultType="java.util.Map">
+        SELECT * from intelligent_drive_travel limit 1;
+    </select>
+
+    
+    <insert id="insertVehicleJourney"  parameterType="com.muheda.domain.IntelligentDriveTravel">
+
+
+        INSERT INTO `intelligent_drive_travel`(
+         `id`,
+         `device_id`,
+         `device_type`,
+         `drive_length`,
+         `drive_time`,
+         `urban_drive_length`,
+         `nationalroad_drive_length`,
+         `highspeed_drive_length`,
+         `night_drive_length`,
+         `speed_up_times` ,
+         `speed_down_times` ,
+         `sharp_turn_times` ,
+         `device_speed_up_times`,
+         `device_speed_down_times`,
+         `device_sharp_turn_times`,
+         `lane_shift_times` ,
+         `over_speed_times` ,
+         `lane_change_times`,
+         `prevehicle_warn_times`,
+         `drive_score`,
+         `start_time`,
+         `end_time` ,
+         `start_lng`,
+         `start_lat`,
+         `end_lng`,
+         `end_lat`,
+         `start_position`,
+         `end_position`,
+         `highest_speed`,
+         `create_time`
+
+        )
+        VALUES(
+            #{primaryKey},
+            #{deviceId},
+            #{deviceType},
+            #{driveLength},
+            #{driveTime},
+            #{urbanDriveLength},
+            #{nationalRoadDriveLength},
+            #{highSpeedDriveLength},
+            #{nightDriveLength},
+            #{speedUpTimes},
+            #{speedDownTimes},
+            #{sharpTurnTimes},
+            #{deviceSpeedUpTimes},
+            #{deviceSpeedDownTimes},
+            #{deviceSharpTurnTimes},
+            #{laneShiftTimes},
+            #{overSpeedTimes},
+            #{laneChangeTimes},
+            #{prevehicleWarnTimes},
+            #{driveScore},
+            #{startTime},
+            #{endTime},
+            #{startLng},
+            #{startLat},
+            #{endLng},
+            #{endLat},
+            #{startPosition},
+            #{endPosition},
+            #{highestSpeed},
+            #{createTime}
+        );
+
+    </insert>
+    
+</mapper>

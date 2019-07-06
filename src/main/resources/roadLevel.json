@@ -1,0 +1,11 @@
+{
+  "1":{
+    "name":"HighSpeedDriveLength",
+     "limitSpeed": "33.3"
+  },
+
+  "2":{
+    "name":"NationalRoadDriveLength",
+    "limitSpeed": "22.22"
+  }
+}

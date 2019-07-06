@@ -1,0 +1,64 @@
+                                :E         KK
+                               W##         ##   j#E##
+                           ############    ##  .j#E##:.
+                           ############  j#### ###E####
+                           ##  ##K   ##  j#### ;L#E##ii
+                           .. .##,   ..    ##   j#E##.
+                          D#############   ##  ###E####
+                          D############# ,####.EW#E##KK
+                             ##W  W##    G####: t#E##
+                            #####:##.    :i## ####E####
+                             ,######       ## ####E####
+                             .########     ##   t#E##
+                          ,###### .####W  ###   t#E##
+                           ###f     ,##   ###   j#E##
+
+
+                                         .L########Wi
+                                      ###################
+                                   ######WKKKKKKKWWKKK######
+                                :#####WKKKWKKKKKKKKKKKKKKW####.
+                              f####KKKKKKKKKKKKKKKKKKKKKKKKK####
+                             ####KKKKKKKKKKKKKKKKKKKKKKKKKKKWW###:
+                           f###WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK###;
+                          E###KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKWWW##,
+                         K##WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK##KW##.
+                        G##WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK##KW##
+                       .##WWKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKW#WKW##
+                       ##WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK##KK###
+                      ##WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK##KK##j
+                     f##KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKW#WKW##
+                     ##KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK##KK###
+                    W#WKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKW#KKK##:
+                    ##KKKKKKKKKKKKKKKKKKKKKKKKKWKKWW###########WKKW#WKKW##
+                   E#WKKKKKKKKKKKWKKKKKKKKKKW###########KfDK#########KKK##;
+                   ##KKKKKKKKKKKW#KKKKKKW########.              #####KKKW##
+                   ##KKKKKKKKKKK##KKKW######f        ;LDt,      W#KKKKKKW##
+                  E##KKKKKKKKKKK##KW####:           ,E###WG.    i#KKKKKKKW#W
+                  ##KKKKKKKKKKKK####K          ,i.   jGfjtf,     #KKKKKKKK##
+                  ##KKKKKKKKKKKK##W         .tW##L.  ;j:         #WKKKKKKK##
+                  ##KKKKKKKKKKKK##         D####WKf.:t:    :     ##KKKKK#WW#
+                  ##KKKKKKKKKKKKW#        L#KtittGG: :iLW#f.     i#KKKKK####:
+    ###i          ##KKKKKKKKKKKKW#        ij:   ;,,.  ,i#E,       ##KKKK####
+   ;#####         ##WKKKKKKKKKKKK#        i  ,W#W.      tt   .    D#KKKK####
+    ## #####.     ##KKKKKKKKKKKKK#        ,fD###j                  W######
+    j#########    ##KKKKKKKKKKKKK#K        tLtfi        ,;          ##i
+     f####  ###i  ;#WKKKKKKKKKKKK##           ,          .;,,       i#G
+      ####j  ####f ##KKKKKKKKKKKKW#              ,      ,iLL;        ##
+      #W ###   ######KKKKKKKKKKKKK#:            ,i  .iLDW.;j:        i#f
+      ## ###i    ####KKKKKKKKKKKKK##           jG .fEW#Wi             ##
+      ##.##        W##KKKKKKKKKKKK##         ;DKt    ,;     .         ##
+      :####  j#     ##K##KKKKKKKKW##         ,Gi    .; ,GEi .         ##
+       :########,    ####WKWKW#####:          ;;;;jjjfi:;:  ,.        ##
+         ,###DW###   K###########              .tL, .       .        j##
+               :###j  ########D                .;: ,,:,;GKj          ##
+                 E###  G#  L###                .,;   iK##W:         ##t
+                   ####    ##K##                :;:   :ti         L##K
+                    .###K  ##i###                               W###L
+                      G###i##i;###K                          j######W,
+                        W####iiif###G                    .E######jij##
+                          ###iiiii#####f.          .D#########Eiiii;E##
+                           ###LiiiiiW#####################Wi;D#iiiiii##
+                            ####W;iiiD#W###########Eti##G##iiW#iiiiii##.
+                              #####ii##G##iiiiiiiiiiii##G##iiW#iiiiiii##
+                                E##ii##D##iiiiiiiiiiii##E#GiiW#iiiiiii##

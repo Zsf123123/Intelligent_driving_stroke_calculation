@@ -1,0 +1,22 @@
+{
+  "basic": {
+
+    "family": "basic",
+    "need": ["lnt", "lat","time"]
+
+   },
+
+  "event": {
+
+      "drive":{
+        "time":"SpeedUpTimes",
+        "systime":"SpeedUpTimes"
+      },
+
+      "basic":{
+        "lnt":"SpeedUpTimes"
+      }
+
+}
+
+}
