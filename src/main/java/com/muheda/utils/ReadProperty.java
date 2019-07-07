@@ -155,13 +155,13 @@ public class ReadProperty {
      * @desc 获取事件数据相关配置信息
      *
      */
-    public static Map<String, Map<String,String>> getEventConfig(){
+    public static Map<String, Map<String, Map<String,String>>> getEventConfig(){
 
-        Map<String, Map<String, String>> eventMap = null;
+        Map<String, Map<String, Map<String,String>>> eventMap = null;
         try {
             String eventDataInfo = getFileContent(Contans.HBASE_INFO_JSONFILE_PATH);
             JSONObject jsonObject = JSONObject.parseObject(eventDataInfo);
-            eventMap = (Map<String, Map<String, String>>) jsonObject.get("event");
+            eventMap = (Map<String, Map<String, Map<String,String>>>) jsonObject.get("event");
         }catch (Exception e){
             e.printStackTrace();
         }

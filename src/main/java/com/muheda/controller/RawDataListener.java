@@ -1,5 +1,8 @@
 package com.muheda.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.muheda.service.handle.StrokeCalculation;
+import com.muheda.utils.StringUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -24,8 +27,24 @@ public class RawDataListener {
 
         // 接收传过来的完整的行程
         String value = record.value();
+        System.out.println(value);
+        if(StringUtil.isEmpty(value)){
+            return;
+        }
 
-        // 传过来的数据包括行程设备号,行程ID,行程开始时间,行程结束时间
+        // 包含了设备号，开始时间，结束时间，主键
+        JSONObject  jsonObject =  (JSONObject)JSONObject.parse(value);
+
+        String imei = (String)jsonObject.get("imei");
+        String startTime = (String)jsonObject.get("startTime");
+        String endTime = (String)jsonObject.get("endTime");
+        String primaryKey = (String)jsonObject.get("primaryKey");
+
+        System.out.println(jsonObject);
+
+        new StrokeCalculation().TaskAssignment(imei,startTime,endTime,primaryKey);
+
+
     }
 
 

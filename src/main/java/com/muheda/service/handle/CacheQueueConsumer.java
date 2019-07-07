@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Date;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/**
+ * @desc 将之前已经完成一部分指标的数据从队列中进行消费。进行外部接口的调用
+ *
+ */
 public class CacheQueueConsumer implements Runnable{
 
 
@@ -34,8 +38,8 @@ public class CacheQueueConsumer implements Runnable{
             Double endLat = intelligentDriveTravel.getEndLat();
 
 
-            /**
-             * 急加速次数，急减速次数，行程开始时间，行程时长，超速次数
+            /**             * 急加速次数，急减速次数，行程开始时间，行程时长，超速次数
+
              */
             Integer deviceSpeedUpTimes = intelligentDriveTravel.getDeviceSpeedUpTimes();
             Integer deviceSpeedDownTimes = intelligentDriveTravel.getDeviceSpeedDownTimes();

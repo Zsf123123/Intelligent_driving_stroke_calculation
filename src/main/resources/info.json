@@ -1,22 +1,41 @@
 {
   "basic": {
-
     "family": "basic",
-    "need": ["lnt", "lat","time"]
-
-   },
-
+    "need": [
+      "lnt",
+      "lat",
+      "time"
+    ]
+  },
   "event": {
 
-      "drive":{
-        "time":"SpeedUpTimes",
-        "systime":"SpeedUpTimes"
+    "drive": {
+      "speedUpTimes": {
+        "mapping": "speedUpTimes",
+        "check": "num",
+        "count": "Accumulate"
       },
-
-      "basic":{
-        "lnt":"SpeedUpTimes"
+      "speedDownTimes": {
+        "mapping": "speedUpTimes",
+        "check": "num",
+        "count": "Accumulate"
       }
+    },
+    "adasDeviate": {
+      "roadDeviate": {
+        "mapping": "laneShiftTimes",
+        "check": "num",
+        "count": "Accumulate"
+      }
+    },
+    "adasWarning": {
+      "warnDistance": {
+        "mapping": "prevehicleWarnTimes",
+        "check": "preCarWarnDistance",
+        "count": "plusOne"
+      }
+    }
 
-}
+  }
 
 }

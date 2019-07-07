@@ -30,23 +30,28 @@ public class HbaseServiceImpl implements HbaseService {
     /**
      * 事件数据解析后的json
      */
-    private  static   Map<String,Map<String,String>>  eventConfigJson = ReadProperty.getEventConfig();
+    private  static   Map<String,Map<String,Map<String,String>>>  eventConfigJson = ReadProperty.getEventConfig();
 
 
-    public   static   Map<String,Map<String,String>>  eventParamsMapping  = new HashMap<String, Map<String, String>>();
+    /**
+     * 关于取出hbase数据的字段以及相关映射
+     */
+    public   static   Map<String,Map<String,Map<String,String>>>  eventParamsMapping  = new HashMap<String, Map<String, Map<String,String>>>();
 
 
     static {
 
         // 初始化事件指标
-        for (Map.Entry<String,Map<String,String>> entry : eventConfigJson.entrySet()) {
+        for (Map.Entry<String,Map<String,Map<String,String>>> entry : eventConfigJson.entrySet()) {
 
             String family = entry.getKey();
-            Map<String, String> map = new HashMap<>();
 
-            for (Map.Entry<String,String>  entry1 : entry.getValue().entrySet()) {
+            Map<String, Map<String,String>> map = new HashMap<>();
+
+            for (Map.Entry<String,Map<String,String>> entry1 : entry.getValue().entrySet()) {
 
                 map.put(entry1.getKey(),entry1.getValue());
+
                 eventParamsMapping.put(family,map);
 
             }
@@ -88,7 +93,13 @@ public class HbaseServiceImpl implements HbaseService {
     }
 
 
-
+    /**
+     * @desc  查询所需的数据from hbase
+     * @param deviceId
+     * @param startTime
+     * @param endTime
+     * @return
+     */
     public Map<String, List<Map<String,String>>>  getEventData(String deviceId, String startTime, String endTime){
 
         String startRowKey = pre + "_" +  deviceId + "_" + startTime;
@@ -97,14 +108,19 @@ public class HbaseServiceImpl implements HbaseService {
 
         Map<String, List<Map<String, String>>> resultMap = new HashMap<>();
 
-        for (Map.Entry<String, Map<String, String>> entry : eventConfigJson.entrySet()) {
+        for (Map.Entry<String, Map<String, Map<String,String>>> entry : eventConfigJson.entrySet()) {
+
             String family = entry.getKey();
 
-            Map<String, String> map = entry.getValue();
+            Map<String, Map<String, String>> map = entry.getValue();
 
             List<String> list = new ArrayList<>();
 
-            for (Map.Entry<String,String>  entry1: map.entrySet()) {
+            for (Map.Entry<String,Map<String,String>>  entry1: map.entrySet()) {
+
+                /**
+                 * 获取该列簇所需要的column
+                 */
                 String key = entry1.getKey();
                 list.add(key);
             }
@@ -124,14 +140,16 @@ public class HbaseServiceImpl implements HbaseService {
     public static void main(String[] args) {
 
 
-        for (Map.Entry<String,Map<String,String>> entry : eventConfigJson.entrySet()) {
+        for (Map.Entry<String,Map<String,Map<String,String>>> entry : eventConfigJson.entrySet()) {
 
             String family = entry.getKey();
-            Map<String, String> map = new HashMap<>();
 
-            for (Map.Entry<String,String>  entry1 : entry.getValue().entrySet()) {
+            Map<String, Map<String,String>> map = new HashMap<>();
+
+            for (Map.Entry<String,Map<String,String>>  entry1 : entry.getValue().entrySet()) {
 
                 map.put(entry1.getKey(),entry1.getValue());
+
                 eventParamsMapping.put(family,map);
 
             }

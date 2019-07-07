@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.UUID;
+
 /**
  *
  * @desc 用户页面管理相关接口
@@ -42,7 +44,10 @@ public class DataApi {
         IntelligentDriveTravel intelligentDriveTravel = new IntelligentDriveTravel();
         intelligentDriveTravel.setDriveTime(10);
         intelligentDriveTravel.setDeviceId("123");
-        intelligentDriveTravel.setPrimarykey("1234");
+
+        String primaryKey = UUID.randomUUID().toString().replaceAll("-", "").substring(0, 8);
+
+        intelligentDriveTravel.setPrimarykey(primaryKey);
 
         dataApiService.insertVehicleJourney(intelligentDriveTravel);
 

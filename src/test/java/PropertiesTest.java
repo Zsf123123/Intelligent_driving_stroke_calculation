@@ -1,7 +1,3 @@
-import com.muheda.utils.ReadProperty;
-
-import java.util.Map;
-
 public class PropertiesTest {
 
     public static void main(String[] args) {
@@ -17,7 +13,7 @@ public class PropertiesTest {
 */
 
 
-        Map<String, Map<String, String>> eventConfig = ReadProperty.getEventConfig();
+   /*     Map<String, Map<String, String>> eventConfig = ReadProperty.getEventConfig();
 
         for (Map.Entry<String, Map<String, String>> entry : eventConfig.entrySet()) {
 
@@ -35,7 +31,7 @@ public class PropertiesTest {
         }
 
 
-
+*/
 
 
     }

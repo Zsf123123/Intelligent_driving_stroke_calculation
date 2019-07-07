@@ -31,9 +31,7 @@ public class DealWithRoute {
      */
     public static List<List<LngAndLat>> fineGrainPathSegmentation(List<LngAndLat> list) {
 
-        LinkedList<List<LngAndLat>> resultLists = new LinkedList<>();
-
-        List<List<LngAndLat>> lists = dealWithRoutereventException(list);
+        List<List<LngAndLat>> resultLists = dealWithRoutereventException(list);
 
         return resultLists;
     }
@@ -45,7 +43,6 @@ public class DealWithRoute {
      */
     public static List<List<LngAndLat>> dealWithRoutereventException(List<LngAndLat> list) {
 
-
         List<List<LngAndLat>> resultLists = new LinkedList<List<LngAndLat>>();
 
         int start = 0;
@@ -53,10 +50,8 @@ public class DealWithRoute {
         //从第二个点开始进行验证
         for (int i = 1; i < list.size(); i++) {
 
-
             //如果验证该点有问题
             if (!verifLegalPoint(list.get(i - 1), list.get(i))) {
-
                 resultLists.add(list.subList(start, i));
                 start = i;
             }
@@ -64,7 +59,6 @@ public class DealWithRoute {
 
         //在遍历之后查看是否还存在没有最后一段行程没有放入返回的集合中
         if (start < list.size() - 1) {
-
             resultLists.add(list.subList(start, list.size() - 1));
 
         }
@@ -80,7 +74,10 @@ public class DealWithRoute {
      */
     public static boolean verifLegalPoint(LngAndLat pre, LngAndLat current) {
 
-        //如果是某个点的经纬度之一为0.0 或者该点距离上一个点的距离大于一个临界值 1000m （暂定，后期写入配置文件中）
+        /**
+         * todo 如果是某个点的经纬度之一为0.0 或者该点距离上一个点的距离大于一个临界值 1000m （暂定，后期写入配置文件中）
+         *
+         */
         return current.getLng() != 0.0 && current.getLat() != 0.0 && !(MapUtils.getDistance(current.getLng(), current.getLat(), pre.getLng(), pre.getLat()) > 1000);
 
     }

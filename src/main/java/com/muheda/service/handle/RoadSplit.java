@@ -26,16 +26,20 @@ public class RoadSplit {
 
             LngAndLat lngAndLat = new LngAndLat();
 
-            lngAndLat.setLng(Double.parseDouble(map.get("lng")));
+            lngAndLat.setLng(Double.parseDouble(map.get("lnt")));
             lngAndLat.setLat(Double.parseDouble(map.get("lat")));
 
             lngAndLats.add(lngAndLat);
         }
 
-        //在这些按照路段分割的行程之内。再次按照距离进行分割。以免出现一些关于设备出现的其他的问题。比如有的设备会经常发送一些经纬度为0的数据
+        /**
+         *  在这些按照路段分割的行程之内。再次按照距离进行分割。以免出现一些关于设备出现的其他的问题。比如有的设备会经常发送一些经纬度为0的数据
+         */
         List<List<LngAndLat>> lists = DealWithRoute.fineGrainPathSegmentation(lngAndLats);
 
-        //需要将切分割完之后的路段。根据判断该行驶路程是否出现拐弯的情况，再进行分路段分割，以确保每一段路是在一条路上
+        /**
+         * 需要将切分割完之后的路段。根据判断该行驶路程是否出现拐弯的情况，再进行分路段分割，以确保每一段路是在一条路上
+         **/
         List<List<LngAndLat>> routesOneWay = DealWithRoute.splitRoadByDirection(lists);
 
         for (List<LngAndLat>  driveLittleRoad : routesOneWay) {
@@ -128,9 +132,6 @@ public class RoadSplit {
         return BasicIndicator;
 
     }
-
-
-
 
 
 
